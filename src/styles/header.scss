@@ -1,0 +1,51 @@
+@use './variables.scss' as *;
+
+header{
+    nav{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        gap:10px;
+        padding: 1rem 1.5rem;
+        height: 56px;
+        top:0;
+        position: sticky;
+        background-color: $backgroundColor;
+        .logoContainer{
+            
+            
+            img{
+                width: 60px;
+                object-fit: contain;
+
+            }
+        }
+
+        .headerSideContainer{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            p{
+                font-size: 16px;
+                cursor: pointer;
+                color: $primary;
+                font-weight: 500;
+            }
+
+            .iconsContainer{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+
+                svg{
+                    font-size: 1.2rem;
+                }
+                .hamburger{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
