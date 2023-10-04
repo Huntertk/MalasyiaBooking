@@ -1,10 +1,10 @@
 import React from 'react'
-import '../styles/homeHighlights.scss';
-import { cardHighLightsDetails } from '../data';
+import '../styles/homeBuffetOption.scss'
+import { homeBuffetOptions } from '../data'
 
 const Cards = () => {
     return  (
-        cardHighLightsDetails.map((data) => {
+        homeBuffetOptions.map((data) => {
             return <div className="card" key={data.id}>
                 <img src={data.image} alt="" />
                 <div className="content">
@@ -14,11 +14,11 @@ const Cards = () => {
             </div>
         })
     )
-} 
+}
 
-const HomeHighlights = () => {
+const HomeBuffetOption = () => {
   return (
-    <section className='HomeHighlightsMainContainer'>
+    <section className='HomeBuffetOptionMainContainer'>
         <h1>Atmosphere 360 highlights</h1>
         <div className="cardMainContainer">
             <Cards />
@@ -27,4 +27,4 @@ const HomeHighlights = () => {
   )
 }
 
-export default HomeHighlights
+export default HomeBuffetOption

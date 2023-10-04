@@ -52,41 +52,6 @@ export const navData = [
                 linkTitle:"Getting SkyWorlds Tickets",
                 link:"https://www.malaysia-tickets.com/genting-skyworlds-theme-park/?_gl=1*by2oxf*_ga*MjAwNTQ0Mzc1MC4xNjk2MzEzNzAw*_ga_Y45PC9R73C*MTY5NjMyNzI4Ny4zLjEuMTY5NjMyOTA5NC40NC4wLjA."
             },
-            {
-                id: uuidv4(),
-                linkTitle:"Genting Skytropolis Tickets",
-                link:"https://www.malaysia-tickets.com/skytropolis-indoor-theme-park-genting/?_gl=1*14anbbh*_ga*MjAwNTQ0Mzc1MC4xNjk2MzEzNzAw*_ga_Y45PC9R73C*MTY5NjMyNzI4Ny4zLjEuMTY5NjMyOTE0NS41OS4wLjA."
-            },
-            {
-                id: uuidv4(),
-                linkTitle:"Genting Highlands Tickets",
-                link:"https://www.malaysia-tickets.com/genting-highlands/?_gl=1*fn716i*_ga*MjAwNTQ0Mzc1MC4xNjk2MzEzNzAw*_ga_Y45PC9R73C*MTY5NjMzMTMwOS40LjAuMTY5NjMzMTU0NC4yOS4wLjA."
-            },
-            {
-                id: uuidv4(),
-                linkTitle:"Genting Awana Cable Car Tickets",
-                link:"https://www.gentingcablecartickets.com/"
-            },
-            {
-                id: uuidv4(),
-                linkTitle:"Berjaya Times Square Tickets",
-                link:"https://www.malaysia-tickets.com/berjaya-times-square-theme-park/?_gl=1*wsefk3*_ga*MjAwNTQ0Mzc1MC4xNjk2MzEzNzAw*_ga_Y45PC9R73C*MTY5NjMzMTMwOS40LjEuMTY5NjMzMTczNC40MC4wLjA."
-            },
-            {
-                id: uuidv4(),
-                linkTitle:"Kuala Lumpur Bird Park Tickets",
-                link:"https://www.zoo-tickets.com/kl-bird-park/"
-            },
-            {
-                id: uuidv4(),
-                linkTitle:"Kidzania Kuala Lumpur Bird Park Tickets",
-                link:"https://www.malaysia-tickets.com/kidzania-kuala-lumpur/?_gl=1*c0r0ip*_ga*MjAwNTQ0Mzc1MC4xNjk2MzEzNzAw*_ga_Y45PC9R73C*MTY5NjMzMTMwOS40LjEuMTY5NjMzMTc5NC40Mi4wLjA."
-            },
-            {
-                id: uuidv4(),
-                linkTitle:"KL Tower Mini Zoo Tickets",
-                link:"https://www.zoo-tickets.com/kl-tower-mini-zoo/"
-            },
         ]
     },
     {
@@ -224,4 +189,103 @@ export const cardHighLightsDetails = [
         title:"Celestial Events",
         desc:"Experience unique celestial events with themed dining nights, creating unforgettable memories under the stars."
     },  
+]
+
+
+
+export const homeBuffetOptions = [
+    {
+        id: uuidv4(),
+        title:"Lunch Buffet",
+        desc:"Indulge in a delectable array of culinary delights during the Lunch Buffet at Atmosphere 360, offering a diverse selection of dishes to satisfy your midday cravings.",
+        image:"https://cdn-imgix.headout.com/media/images/552ab286b2d57d45d4bc1f06262adf7d-Atmosphere%20360%207.jpg?auto=format&w=468.29999999999995&h=267.59999999999997&q=90&fit=crop&ar=7%3A4"
+    },
+    {
+        id: uuidv4(),
+        title:"Hi-Tea Buffet",
+        desc:"Treat yourself to an afternoon of delightful treats and savory bites at the Hi-Tea Buffet, where an assortment of sweet and savory delicacies awaits your palate.",
+        image:"https://cdn-imgix.headout.com/media/images/9cea8e28905d7495bb9ce5754bbc4753-Atmosphere%20360%206.jpg?auto=format&w=468.29999999999995&h=267.59999999999997&q=90&fit=crop&ar=7%3A4"
+    },
+    {
+        id: uuidv4(),
+        title:"Dinner Buffet",
+        desc:"Embark on a gastronomic journey during the Dinner Buffet, featuring an opulent spread of gourmet dishes amidst the enchanting ambiance of the revolving restaurant, creating a truly memorable dining experience.",
+        image:"https://cdn-imgix.headout.com/media/images/599371249228e052f2b7261ade412763-KL%20Tower%20Atmosphere%20360%204.jpg?auto=format&w=468.29999999999995&h=267.59999999999997&q=90&fit=crop&ar=7%3A4"
+    },
+]
+
+
+
+export const homeVisitPlanData = [
+    {
+        id: uuidv4(),
+        image:"https://cdn-imgix.headout.com/media/images/3fab810baf246f9c5cec7976f6f1372f-KL%20Tower%20Atmosphere%20360%205.jpg?auto=format&w=814.9333333333333&h=458.4&q=90&fit=crop&ar=16%3A9",
+        type:"timings",
+        details:[
+            "Operating Hours: 12 PM - 10 PM",
+            "Lunch: 2 PM",
+            "Hi-Tea: 5 PM",
+            "Dinner: 9 PM"
+        ]
+    },
+    {
+        id: uuidv4(),
+        image:"https://cdn-imgix.headout.com/media/images/a3527012bc512e6f3787c29257582cdd-Atmosphere%20360%205.jpg?auto=format&w=814.9333333333333&h=458.4&q=90&fit=crop&ar=16%3A9",
+        type:"location",
+        details:[
+            "Address: Level 7 Unit, 1 Menara Goldstone Holiday Inn Express, No 84, Jalan Raja",
+            "Chulan, 50200, Kuala Lumpur, Malaysia.",
+            "By Metro: 3- LRT Ampang Line (Nearest Stop: Masjid Jamang)",
+            "By Bus: The Weld, Menara Hup Seng/ KL Tower (Timur) (Nearest Stop: Bukit Bitang)",
+            "By Car: Distance From Airport: 28.5 KM from Sultan Abdul Aziz Shah Airport (Subang Airport) (SZB) (Car Parking: Available)"
+        ]
+    },
+    {
+        id: uuidv4(),
+        image:"https://cdn-imgix.headout.com/media/images/74a5945fe3eca393deb6fb05af0fbd5e-Atmosphere%20360.jpg?auto=format&w=814.9333333333333&h=458.4&q=90&fit=crop&ar=16%3A9",
+        type:"facilities",
+        details:[
+            "ATM: On-site ATM for easy access to cash.",
+            "Praying Room: A designated, peaceful space for prayer and meditation.",
+            "Toilet: Hygienic, well-maintained restrooms with essential amenities.",
+            "Parking Area: Spacious and secure parking to accommodate all vehicle sizes.",
+            "Hotel Drop-in/Drop-off: Convenient transportation available for selected hotels."
+        ]
+    },
+    {
+        id: uuidv4(),
+        image:"https://cdn-imgix.headout.com/media/images/f250dec4f0fcff500dd8a4d63a94f3f1-Atmosphere%20360%202.jpg?auto=format&w=814.9333333333333&h=458.4&q=90&fit=crop&ar=16%3A9",
+        type:"dress",
+        details:[
+            "The dress code at Atmosphere 360 is smart casual.",
+            "Neat and presentable attire is recommended.",
+            "Sleeveless shirts and flip-flops are not permitted.",
+            "Gentlemen are advised to avoid wearing shorts and sandals.",
+            "Guests are encouraged to dress comfortably and elegantly for a delightful dining experience."
+        ]
+    },
+    {
+        id: uuidv4(),
+        image:"https://cdn-imgix.headout.com/media/images/64c273cc09bf80adddfbf4cab3aef82d-Atmosphere%20360%203.jpg?auto=format&w=814.9333333333333&h=458.4&q=90&fit=crop&ar=16%3A9",
+        type:"accessibility",
+        details:[
+            "Atmosphere 360 is wheelchair accessible, providing ramps and elevators for easy mobility.",
+            "Accessible restrooms are available on the premises for visitors with disabilities.",
+            "Stroller accessible and infant seats are available on request.",
+            "Trained staff members are ready to offer assistance and support to those in need."
+        ]
+    },
+    {
+        id: uuidv4(),
+        image:"https://cdn-imgix.headout.com/media/images/4462c42422cdf394163274f45c67403b-Atmosphere%20360%204.jpg?auto=format&w=814.9333333333333&h=458.4&q=90&fit=crop&ar=16%3A9",
+        type:"rules",
+        details:[
+            "Guests are required to adhere to the designated dress code of smart casual attire for a comfortable dining experience.",
+            "Smoking is strictly prohibited within the premises, ensuring a pleasant environment for all visitors.",
+            "Pets are not allowed inside Atmosphere 360, except for service animals assisting individuals with disabilities.",
+            "The use of drones or any unauthorized aerial devices is not permitted on the premises.",
+            "Visitors must follow staff instructions and maintain decorum to ensure a harmonious and enjoyable atmosphere for everyone."
+        ]
+    },
+   
 ]

@@ -6,6 +6,8 @@ import HomeWhyVisit from '../components/HomeWhyVisit'
 import HomWhatIsTheBest from '../components/HomWhatIsTheBest'
 import HomeTicketExplaination from '../components/HomeTicketExplaination'
 import HomeHighlights from '../components/HomeHighlights'
+import HomeBuffetOption from '../components/HomeBuffetOption'
+import HomeVisitPlan from '../components/HomeVisitPlan'
 
 const Home = () => {
   return (
@@ -17,6 +19,8 @@ const Home = () => {
       <HomWhatIsTheBest />
       <HomeTicketExplaination />
       <HomeHighlights />
+      <HomeBuffetOption />
+      <HomeVisitPlan />
      </section>
   )
 }
