@@ -1,8 +1,10 @@
 @use './variables.scss' as *;
 .sideNavLinksContainer{
-    min-height: calc(100vh - 56px);
+    position: absolute;
+    min-height: calc(100vh - 40px);
     background-color: $backgroundColor;
     z-index: 1;
+    top:56px;
     width: 100%;
     
     .linksContainer{
