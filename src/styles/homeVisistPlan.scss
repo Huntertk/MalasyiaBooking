@@ -51,3 +51,22 @@
             }
         }
 }
+
+
+
+
+@media screen and (min-width: 767px) {
+    .homeVisitPlanMainContainer {
+
+            .btnContainer {
+                overflow-x: unset;
+
+            }
+
+            .card {
+               display: grid;
+               grid-template-columns: 500px 1fr;
+            }
+        }
+    
+}

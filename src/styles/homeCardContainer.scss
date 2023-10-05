@@ -95,3 +95,27 @@
         }
     }
 }
+
+
+//Tablet and Laptop Media Query
+
+@media screen and (min-width: 767px) {
+    .HomeCardMainContainer{
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       gap: 20px;
+
+       .cardContainer{
+        margin-left: auto;
+        margin-right: auto;
+        width: 350px;
+       }
+    }
+}
+
+
+@media screen and (min-width:1023px) {
+    .HomeCardMainContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

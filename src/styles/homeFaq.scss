@@ -24,6 +24,7 @@
             .questionContainer{
                 display: flex;
                 align-items: center;
+                cursor: pointer;
                 justify-content: space-evenly;
                 padding: 0.5rem 0;
 
@@ -52,4 +53,20 @@
             }
         }
     }
+}
+
+
+@media screen and (min-width: 767px) {
+    .homeFAQMainContainer {
+    
+            .questionMainContainer {
+                .questionNanswerContainer {
+                    .questionContainer {
+
+                        justify-content: space-between;
+                       
+                    }
+                }
+            }
+        }
 }

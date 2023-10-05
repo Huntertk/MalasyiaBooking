@@ -19,7 +19,7 @@ const Cards = () => {
 const HomeBuffetOption = () => {
   return (
     <section className='HomeBuffetOptionMainContainer'>
-        <h1>Atmosphere 360 highlights</h1>
+        <h1>Buffet Options at Atmosphere 360</h1>
         <div className="cardMainContainer">
             <Cards />
         </div>
