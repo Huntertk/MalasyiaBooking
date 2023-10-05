@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import '../styles/homeFaq.scss';
-import {IoIosArrowUp, IoIosArrowDown} from 'react-icons/io';
+import {AiOutlinePlusSquare, AiOutlineMinusSquare} from 'react-icons/ai';
 import { homeFAQ } from '../data';
+
 
 const QuestionContainer = ({data}) => {
     const [isModalOpen, setIsModalOpen] = useState(false)
@@ -10,7 +11,11 @@ const QuestionContainer = ({data}) => {
             <div className="questionContainer" onClick={() => setIsModalOpen(prev => !prev)}>
                 <h2>{data.ques}</h2>
                 <div className="icon">
-                   {isModalOpen ? <IoIosArrowUp/> : <IoIosArrowDown/ >}
+                   {isModalOpen ? 
+                   <AiOutlineMinusSquare/ >
+                   : 
+                   <AiOutlinePlusSquare/>
+                }
                 </div>
             </div>
             {
