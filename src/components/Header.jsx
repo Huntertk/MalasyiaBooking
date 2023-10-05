@@ -5,6 +5,7 @@ import {GoGlobe} from 'react-icons/go'
 import {IoReorderThreeOutline} from 'react-icons/io5'
 import {RxCross1} from 'react-icons/rx'
 import SmallSidebar from './SmallSidebar'
+import BigNavbar from './BigNavbar'
 
 const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(false)
@@ -27,6 +28,7 @@ const Header = () => {
                 </div>
             </div>
         </nav>
+        <BigNavbar />
         {
         isNavOpen && <SmallSidebar />
         }

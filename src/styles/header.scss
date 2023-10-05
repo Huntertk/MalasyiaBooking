@@ -1,6 +1,8 @@
 @use './variables.scss' as *;
 
 header{
+    max-width: $maxWidth;
+    margin: 0 auto;
     nav{
         display:flex;
         align-items: center;
@@ -50,4 +52,33 @@ header{
             }
         }
     }
+}
+
+
+//Media Query for laptop
+
+@media screen and (min-width: 1023px) {
+
+    header {
+    
+            nav {
+                position: unset;
+                
+                .logoContainer {
+                    padding-top: 1rem;
+                    img {
+                        width: 120px;
+                        object-fit: cover;
+    
+                    }
+                }
+    
+                .headerSideContainer {
+                    .iconsContainer {
+                        display: none;
+                    }
+                }
+            }
+        }
+    
 }
