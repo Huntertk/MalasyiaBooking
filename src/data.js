@@ -73,25 +73,37 @@ export const cardData = [
         id: uuidv4(),
         image:"https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/142a9e38-631b-4aaf-80fa-c772579f15c7-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-08.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
         title:"Atmosphere 360 Revolving Restaurant - Dinner Buffet",
-        price:"MYR 199"
+        desc:"Make your special occasions more memorable by booking a window seat view and opting for the celebration setup, whole cake, and a flower bouquet."
     },
     {
         id: uuidv4(),
         image:"https://cdn-imgix.headout.com/tour/37159/TOUR-IMAGE/5d7677d3-4a88-45a8-88c5-52b0d6222d22-19082-kuala-lumpur-atmosphere-360-revolving-restaurant---lunch-buffet-01.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
         title:"Atmosphere 360 Revolving Restaurant - Lunch Buffet",
-        price:"MYR 199"
+        desc:"Experience a memorable lunch 282 meters above the ground in the Kuala Lumpur Tower, Southeast Asia's tallest revolving restaurant."
     },
     {
         id: uuidv4(),
         image:"https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/142a9e38-631b-4aaf-80fa-c772579f15c7-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-08.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
         title:"Atmosphere 360 Revolving Restaurant - Dinner Buffet",
-        price:"MYR 118"
+        desc:"Relax in the luxuries of fine dining at 282 meters in the sky at Atmosphere 360, the highest-revolving restaurant in all of Southeast Asia."
+    },
+     {
+        id: uuidv4(),
+        image:"https://cdn-imgix.headout.com/tour/37159/TOUR-IMAGE/5d7677d3-4a88-45a8-88c5-52b0d6222d22-19082-kuala-lumpur-atmosphere-360-revolving-restaurant---lunch-buffet-01.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
+        title:"Atmosphere 360 Revolving Restaurant - Lunch Buffet",
+        desc:"Experience a memorable lunch 282 meters above the ground in the Kuala Lumpur Tower, Southeast Asia's tallest revolving restaurant."
     },
     {
         id: uuidv4(),
         image:"https://cdn-imgix.headout.com/tour/37157/TOUR-IMAGE/3b5d031b-f350-4cfd-a9c8-5ff23da82c9c-19081-kuala-lumpur-atmosphere-360-revolving-restaurant---hi-tea-buffet-07.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
         title:"Atmosphere 360 Revolving Restaurant - Hi Tea Buffet",
-        price:"MYR 88"
+        desc:"Look over the city of Kuala Lumpur from the observation deck at Atmosphere 360 as you enjoy a delicious Hi-Tea Buffet."
+    },
+     {
+        id: uuidv4(),
+        image:"https://cdn-imgix.headout.com/tour/37159/TOUR-IMAGE/5d7677d3-4a88-45a8-88c5-52b0d6222d22-19082-kuala-lumpur-atmosphere-360-revolving-restaurant---lunch-buffet-01.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
+        title:"Atmosphere 360 Revolving Restaurant - Lunch Buffet",
+        desc:"Experience a memorable lunch 282 meters above the ground in the Kuala Lumpur Tower, Southeast Asia's tallest revolving restaurant."
     },
     
 ]
