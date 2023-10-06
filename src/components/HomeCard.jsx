@@ -8,9 +8,28 @@ const Calender = ({id}) =>{
     const [selectedDate, setSelectedDate] = useState(false)
     return(
         <div className="calender">
-            <label htmlFor={id}>
-                <BsFillCalendar2MinusFill />
+            
+            <div className="recentDateContainer">
+                <button onClick={() => setSelectedDate(new Date(Date.now()))}>
+                        Today
+                    <span>
+                        {new Date().getDate()}
+                    </span>
+                </button>
+                <button onClick={() => setSelectedDate(new Date(Date.now() + 1000*60*60*24))}>
+                        Tomorrow
+                    <span>
+                        {new Date().getDate() + 1}
+                    </span>
+                </button>
+                <label htmlFor={id}>
+                <p>
+                    <BsFillCalendar2MinusFill />
+                    <span>More Dates</span>
+                </p>
             </label>
+            </div>
+            
             <DatePicker id={id} selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
         </div>
     )
@@ -31,6 +50,7 @@ const HomeCard = ({data}) => {
                 <h3>{title}</h3>
                 <p>{desc}</p>
                 <p>Next available : Tomorrow</p>
+                <p>Select Date</p>
                 <Calender id={id} />
             </div>
             <div className="accomodations">
