@@ -10,7 +10,8 @@ import {
     HomeBuffetOption,
     HomeVisitPlan,
     HomeVisitorTips,
-    HomeFaq
+    HomeFaq,
+    HomeMap
 } from '../components/index'
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
       <HomeBuffetOption />
       <HomeVisitPlan />
       <HomeVisitorTips />
+      <HomeMap />
       <HomeFaq />
      </section>
   )

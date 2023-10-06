@@ -8,6 +8,7 @@ import HomeBuffetOption from './HomeBuffetOption'
 import HomeVisitPlan from './HomeVisitPlan'
 import HomeVisitorTips from './HomeVisitorTips'
 import HomeFaq from './HomeFaq'
+import HomeMap from './HomeMap'
 
 
 export {
@@ -20,5 +21,6 @@ export {
     HomeBuffetOption,
     HomeVisitPlan,
     HomeVisitorTips,
-    HomeFaq
+    HomeFaq,
+    HomeMap
 }

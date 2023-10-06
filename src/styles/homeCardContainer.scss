@@ -15,11 +15,27 @@
         .imageContainer{
             display: flex;
             align-items: center;
-            gap: 8px;            
+            gap: 8px;           
+            overflow-x: scroll; 
+            padding-bottom: 1rem;
             img{
                 object-fit: cover;
-                height: 130px;
+                height: 200px;
+                width: 200px;
                 border-radius: 8px;
+            }
+        }
+        .calender{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            svg{
+                font-size: 1.2rem;
+                color: $primary;
+            }
+            input {
+                border: 0;
             }
         }
 
@@ -119,6 +135,7 @@
                 gap: 8px;
                 overflow-x: scroll;
                 padding-bottom: 1rem;
+               
                 img {
                     object-fit: cover;
                     height: 200px;

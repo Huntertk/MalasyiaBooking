@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {AiFillStar} from 'react-icons/ai'
+import {BsFillCalendar2MinusFill} from 'react-icons/bs'
+import DatePicker from "react-datepicker";
+import 'react-datepicker/dist/react-datepicker.css'
+
+const Calender = ({id}) =>{
+    const [selectedDate, setSelectedDate] = useState(false)
+    return(
+        <div className="calender">
+            <label htmlFor={id}>
+                <BsFillCalendar2MinusFill />
+            </label>
+            <DatePicker id={id} selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
+        </div>
+    )
+}
 
 
 const HomeCard = ({data}) => {
-    const {image, title, desc} = data;
+    console.log(data);
+    const {image, id, title, desc} = data;
   return (
     <div className="cardContainer">
         <div className="imageContainer">
@@ -15,6 +31,7 @@ const HomeCard = ({data}) => {
                 <h3>{title}</h3>
                 <p>{desc}</p>
                 <p>Next available : Tomorrow</p>
+                <Calender id={id} />
             </div>
             <div className="accomodations">
                <div className="iconsContainer">
