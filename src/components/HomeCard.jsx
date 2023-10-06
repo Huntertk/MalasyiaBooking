@@ -6,7 +6,11 @@ const HomeCard = ({data}) => {
     const {image, title, desc} = data;
   return (
     <div className="cardContainer">
-            <img src={image} alt="" />
+        <div className="imageContainer">
+            <img src={image[0]} alt="" />
+            <img src={image[1]} alt="" />
+            <img src={image[2]} alt="" />
+        </div>
             <div className="content">
                 <h3>{title}</h3>
                 <p>{desc}</p>

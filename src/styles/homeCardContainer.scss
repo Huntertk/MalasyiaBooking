@@ -12,11 +12,15 @@
         border: 1px solid $cardBorderColor;
         border-radius: 20px;
         overflow: hidden;
-
-        img{
-            object-fit: cover;
-            height: 200px;
-            border-radius: 8px;
+        .imageContainer{
+            display: flex;
+            align-items: center;
+            gap: 8px;            
+            img{
+                object-fit: cover;
+                height: 130px;
+                border-radius: 8px;
+            }
         }
 
         .content{

@@ -2,7 +2,6 @@ import React from 'react'
 import '../styles/homeCardContainer.scss'
 import { cardData } from '../data'
 import HomeCard from './HomeCard';
-import HomeCardBigDevice from './HomeCardBigDevice';
 
 
 const HomeCardContainer = () => {
