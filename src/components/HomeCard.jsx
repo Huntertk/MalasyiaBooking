@@ -77,13 +77,13 @@ const HomeCard = ({data}) => {
             </div>
             <div className="cardBtnContainer">
                 <button className='checkAvailability'>Book Now</button>
-            </div>
             <div className="cancelPolicy">
                 <BiSolidDollarCircle />
                 <div className="cancelPolicyContent">
                     <p>Cancellation policy</p>
                     <span>Cancellation is possible until 24 hours before your visit.</span>
                 </div>
+            </div>
             </div>
         </div>
   )
