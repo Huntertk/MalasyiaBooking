@@ -19,7 +19,6 @@ const Header = () => {
                 <img src={logo} alt="" />
             </div>
             <div className='headerSideContainer'>
-                <p>Buy tickets</p>
                     <GoGlobe />
                 <div className="iconsContainer" onClick={handleNavbar}>
                     {
