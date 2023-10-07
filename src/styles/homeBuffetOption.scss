@@ -12,9 +12,11 @@
     }
 
     .cardMainContainer {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(3,350px);
+        overflow-x: scroll;
         gap: 1.5rem;
+        padding-bottom: 1rem;
 
 
         .card {
