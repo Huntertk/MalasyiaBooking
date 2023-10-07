@@ -8,6 +8,10 @@ const HomWhatIsTheBest = () => {
         <p>For a seamless and hassle-free experience, the best way to buy Atmosphere 360 tickets is through online booking. Embrace the convenience and benefits of securing your reservation in advance.</p>
         <ul>
             <li>
+                <span>Discounts : </span>
+                Avail special discounts and promotional offers exclusively available for online bookings, making your experience even more economical.
+            </li>
+            <li>
                 <span>Advance Booking : </span>
                 Reserve your preferred dining time in advance, ensuring availability on your desired date.
             </li>
@@ -15,10 +19,7 @@ const HomWhatIsTheBest = () => {
                 <span>Convenience : </span>
                 Save time and effort by avoiding long queues at the ticket counter, making your visit smoother.
             </li>
-            <li>
-                <span>Discounts : </span>
-                Avail special discounts and promotional offers exclusively available for online bookings, making your experience even more economical.
-            </li>
+            
         </ul>
     </section>
   )
