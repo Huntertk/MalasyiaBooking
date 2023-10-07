@@ -64,7 +64,6 @@ const HomeCard = ({data}) => {
                 <h3>{title}</h3>
                 <p>{desc}</p>
                 <p>Next available : Tomorrow</p>
-                <p>Select Date</p>
                 <Calender id={id} />
             </div>
             <div className="cardBtnContainer">

@@ -38,7 +38,7 @@
                 justify-content: flex-start;
                 gap: 10px;
                 background-color: #f1f1f1;
-                padding: 1rem;
+                padding: 0.5rem;
                 border-radius: 8px;
                 svg{
                     font-size: 1rem;
@@ -58,9 +58,9 @@
                     background-color: #f1f1f1;
                     border: 0;
                     outline: none;
-                    padding: 1rem;
+                    padding: 0.5rem;
                     border-radius: 8px;
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
                     font-weight: 600;
                     cursor: pointer;
                     display: flex;
@@ -128,7 +128,7 @@
             button{
                 width: 100%;
                 display: block;
-                padding: 11px 16px 13px;
+                padding: 11px;
                 border-radius: 8px;
                 font-size: 16px;
                 font-weight: 600;
@@ -148,8 +148,8 @@
             display: flex;
             align-items: center;
             border-radius: 8px;
-            padding: 1rem;
-            gap: 20px;
+            padding: 0.5rem 1rem;
+            gap: 10px;
 
 
             svg{
