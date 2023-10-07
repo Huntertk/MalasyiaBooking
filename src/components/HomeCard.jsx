@@ -67,14 +67,6 @@ const HomeCard = ({data}) => {
                 <p>Select Date</p>
                 <Calender id={id} />
             </div>
-            <div className="accomodations">
-               <div className="iconsContainer">
-                        <AiFillStar /> 
-                    <p>
-                        4.5
-                    </p>
-               </div>
-            </div>
             <div className="cardBtnContainer">
                 <button className='checkAvailability'>Book Now</button>
             <div className="cancelPolicy">
