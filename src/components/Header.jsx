@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../styles/header.scss'
-import logo from '../assets/images/malaysia-tickets_b-logo.svg'
+import logo from '../assets/images/logo.png'
 import {GoGlobe} from 'react-icons/go'
 import {IoReorderThreeOutline} from 'react-icons/io5'
 import {RxCross1} from 'react-icons/rx'
