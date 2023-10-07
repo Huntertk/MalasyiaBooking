@@ -1,11 +1,20 @@
 import React, { useState } from 'react'
 import {AiFillStar} from 'react-icons/ai'
 import {BsFillCalendar2MinusFill} from 'react-icons/bs'
-import DatePicker from "react-datepicker";
-import 'react-datepicker/dist/react-datepicker.css'
+import { format } from 'date-fns';
+import 'react-day-picker/dist/style.css';
+import { DayPicker } from 'react-day-picker';
+import {BiSolidDollarCircle} from 'react-icons/bi'
 
 const Calender = ({id}) =>{
     const [selectedDate, setSelectedDate] = useState(false)
+    const [calenderOpen, setCalenderOpen] = useState(false)
+
+     const footer = selectedDate ? (
+    <p>You selected {format(selectedDate, 'PPP')}.</p>
+  ) : (
+    <p>Please pick a day.</p>
+  );
     return(
         <div className="calender">
             
@@ -22,15 +31,20 @@ const Calender = ({id}) =>{
                         {new Date().getDate() + 1}
                     </span>
                 </button>
-                <label htmlFor={id}>
-                <p>
+                <p onClick={() => setCalenderOpen(prev => !prev)}>
                     <BsFillCalendar2MinusFill />
                     <span>More Dates</span>
                 </p>
-            </label>
             </div>
             
-            <DatePicker id={id} selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
+            <DayPicker
+            style={calenderOpen === false && {display:'none'}}
+            mode="single"
+            selected={selectedDate} 
+            showOutsideDays
+            onSelect={setSelectedDate} 
+            footer={footer}
+            />
         </div>
     )
 }
@@ -63,6 +77,13 @@ const HomeCard = ({data}) => {
             </div>
             <div className="cardBtnContainer">
                 <button className='checkAvailability'>Book Now</button>
+            </div>
+            <div className="cancelPolicy">
+                <BiSolidDollarCircle />
+                <div className="cancelPolicyContent">
+                    <p>Cancellation policy</p>
+                    <span>Cancellation is possible until 24 hours before your visit.</span>
+                </div>
             </div>
         </div>
   )
