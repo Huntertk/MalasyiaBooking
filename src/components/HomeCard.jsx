@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import {AiFillStar} from 'react-icons/ai'
 import {BsFillCalendar2MinusFill} from 'react-icons/bs'
 import { format } from 'date-fns';
 import 'react-day-picker/dist/style.css';
+import './day-picker.css';
 import { DayPicker } from 'react-day-picker';
 import {BiSolidDollarCircle} from 'react-icons/bi'
 
@@ -15,6 +15,8 @@ const Calender = ({id}) =>{
   ) : (
     <p>Please pick a day.</p>
   );
+
+
     return(
         <div className="calender">
             
@@ -36,7 +38,6 @@ const Calender = ({id}) =>{
                     <span>More Dates</span>
                 </p>
             </div>
-            
             <DayPicker
             style={calenderOpen === false && {display:'none'}}
             mode="single"
