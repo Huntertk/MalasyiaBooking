@@ -6,8 +6,7 @@ const HomeTopContainer = () => {
   return (
     <section className='HomeTopContainer'>
         <div className="content">
-            <h1>Book the Best Dining Experiences at Atmosphere 360</h1>
-            <p>Headout is an authorized and trusted partner of the venue, offering curated experiences to enjoy this attraction.</p>
+            <h1>Reserve a fantastic dining experience at atmosphere 360 restaurant</h1> 
         </div>
         <div className="homeTopImgContainer">
             <img src={image} alt="" />
