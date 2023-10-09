@@ -93,9 +93,11 @@ export const cardData = [
         id: uuidv4(),
         image:[
             imgFour,
+            dinnerBuffet,
             imgThree,
             imgEight,
             imgNine,
+            teaBuffet,
             imgSeven,
         ],
         title:"Atmosphere 360 Revolving Restaurant - Dinner Buffet",
@@ -105,6 +107,7 @@ export const cardData = [
         id: uuidv4(),
         image:[
             imgTwo,
+            lunchBuffet,
             imgOne,
             imgFive,
             imgTen,
@@ -118,10 +121,12 @@ export const cardData = [
     {
         id: uuidv4(),
         image:[
-             imgFour,
+            imgFour,
+            dinnerBuffet,
             imgThree,
             imgEight,
             imgNine,
+            teaBuffet,
             imgSeven,
         ],
         title:"Atmosphere 360 Revolving Restaurant - Dinner Buffet",
@@ -131,6 +136,7 @@ export const cardData = [
         id: uuidv4(),
        image:[
             imgTwo,
+            lunchBuffet,
             imgOne,
             imgFive,
             imgTen,
@@ -144,9 +150,11 @@ export const cardData = [
         id: uuidv4(),
       image:[
             imgFour,
+            dinnerBuffet,
             imgThree,
             imgEight,
             imgNine,
+            teaBuffet,
             imgSeven,
         ],
         title:"Atmosphere 360 Revolving Restaurant - Hi Tea Buffet",
@@ -155,7 +163,8 @@ export const cardData = [
      {
         id: uuidv4(),
        image:[
-             imgTwo,
+           imgTwo,
+            lunchBuffet,
             imgOne,
             imgFive,
             imgTen,
