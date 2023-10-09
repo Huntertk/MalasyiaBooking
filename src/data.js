@@ -1,4 +1,24 @@
 import { v4 as uuidv4 } from 'uuid';
+import imgCelestial from './assets/images/Celestial.avif'
+import imgSkyHigh from './assets/images/SkyHigh.avif'
+import lunchBuffet from './assets/images/LunchBuffet.avif'
+import dinnerBuffet from './assets/images/DinnerBuffet.avif'
+import teaBuffet from './assets/images/TeaBuffet.avif'
+import imgOne from './assets/images/IMGONE.JPG'
+import imgTwo from './assets/images/IMGTWO.JPG'
+import imgThree from './assets/images/IMGTHREE.JPG'
+import imgFour from './assets/images/IMGFOUR.jpg'
+import imgFive from './assets/images/IMGFIVE.JPG'
+import imgSix from './assets/images/IMGSIX.JPG'
+import imgSeven from './assets/images/IMGSEVEN.JPG'
+import imgEight from './assets/images/IMGEIGHT.JPG'
+import imgNine from './assets/images/IMGNINE.JPG'
+import imgTen from './assets/images/IMGTEN.JPG'
+import imgEleven from './assets/images/IMGELEVEN.JPG'
+import imgTwelve from './assets/images/IMGTWEVEL.JPG'
+import imgThirteen from './assets/images/IMGTHIRTEEN.JPG'
+import imgFourteen from './assets/images/IMGFOURTEEN.JPG'
+import imgFifteen from './assets/images/IMGFIFITEEN.JPG'
 
 export const navData = [
     {
@@ -72,9 +92,11 @@ export const cardData = [
     {
         id: uuidv4(),
         image:[
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/142a9e38-631b-4aaf-80fa-c772579f15c7-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-08.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/491ff3ba-1d10-40ce-baea-a45349e03afe-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-01.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/d3ee2daa-092a-4d43-b5b3-1b02517a0d90-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-02.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4"
+            imgFour,
+            imgThree,
+            imgEight,
+            imgNine,
+            imgSeven,
         ],
         title:"Atmosphere 360 Revolving Restaurant - Dinner Buffet",
         desc:"Make your special occasions more memorable by booking a window seat view and opting for the celebration setup, whole cake, and a flower bouquet."
@@ -82,9 +104,13 @@ export const cardData = [
     {
         id: uuidv4(),
         image:[
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/142a9e38-631b-4aaf-80fa-c772579f15c7-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-08.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/491ff3ba-1d10-40ce-baea-a45349e03afe-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-01.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/d3ee2daa-092a-4d43-b5b3-1b02517a0d90-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-02.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4"
+            imgTwo,
+            imgOne,
+            imgFive,
+            imgTen,
+            imgTwelve,
+            imgFifteen
+
         ],
         title:"Atmosphere 360 Revolving Restaurant - Lunch Buffet",
         desc:"Experience a memorable lunch 282 meters above the ground in the Kuala Lumpur Tower, Southeast Asia's tallest revolving restaurant."
@@ -92,9 +118,11 @@ export const cardData = [
     {
         id: uuidv4(),
         image:[
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/142a9e38-631b-4aaf-80fa-c772579f15c7-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-08.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/491ff3ba-1d10-40ce-baea-a45349e03afe-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-01.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/d3ee2daa-092a-4d43-b5b3-1b02517a0d90-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-02.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4"
+             imgFour,
+            imgThree,
+            imgEight,
+            imgNine,
+            imgSeven,
         ],
         title:"Atmosphere 360 Revolving Restaurant - Dinner Buffet",
         desc:"Relax in the luxuries of fine dining at 282 meters in the sky at Atmosphere 360, the highest-revolving restaurant in all of Southeast Asia."
@@ -102,9 +130,12 @@ export const cardData = [
      {
         id: uuidv4(),
        image:[
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/142a9e38-631b-4aaf-80fa-c772579f15c7-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-08.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/491ff3ba-1d10-40ce-baea-a45349e03afe-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-01.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/d3ee2daa-092a-4d43-b5b3-1b02517a0d90-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-02.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4"
+            imgTwo,
+            imgOne,
+            imgFive,
+            imgTen,
+            imgTwelve,
+            imgFifteen
         ],
         title:"Atmosphere 360 Revolving Restaurant - Lunch Buffet",
         desc:"Experience a memorable lunch 282 meters above the ground in the Kuala Lumpur Tower, Southeast Asia's tallest revolving restaurant."
@@ -112,9 +143,11 @@ export const cardData = [
     {
         id: uuidv4(),
       image:[
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/142a9e38-631b-4aaf-80fa-c772579f15c7-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-08.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/491ff3ba-1d10-40ce-baea-a45349e03afe-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-01.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/d3ee2daa-092a-4d43-b5b3-1b02517a0d90-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-02.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4"
+            imgFour,
+            imgThree,
+            imgEight,
+            imgNine,
+            imgSeven,
         ],
         title:"Atmosphere 360 Revolving Restaurant - Hi Tea Buffet",
         desc:"Look over the city of Kuala Lumpur from the observation deck at Atmosphere 360 as you enjoy a delicious Hi-Tea Buffet."
@@ -122,9 +155,12 @@ export const cardData = [
      {
         id: uuidv4(),
        image:[
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/142a9e38-631b-4aaf-80fa-c772579f15c7-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-08.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/491ff3ba-1d10-40ce-baea-a45349e03afe-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-01.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4",
-            "https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/d3ee2daa-092a-4d43-b5b3-1b02517a0d90-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-02.jpg?auto=format&w=288&h=384&q=90&fit=crop&ar=3%3A4"
+             imgTwo,
+            imgOne,
+            imgFive,
+            imgTen,
+            imgTwelve,
+            imgFifteen
         ],
         title:"Atmosphere 360 Revolving Restaurant - Lunch Buffet",
         desc:"Experience a memorable lunch 282 meters above the ground in the Kuala Lumpur Tower, Southeast Asia's tallest revolving restaurant."
@@ -137,7 +173,7 @@ export const cardData = [
 export const  bookTicketDetails = [
     {
         id: uuidv4(),
-        image:"https://cdn-imgix.headout.com/media/images/691e113ffa539b398ba80a8738c9397a-Atmosphere%20360%2010.jpg?auto=format&w=468.29999999999995&h=267.59999999999997&q=90&fit=crop&ar=7%3A4",
+        image: imgEleven,
         title:"Dinner Buffet",
         desc:[
             "Savor the height of luxury at Atmosphere 360, Southeast Asia's highest-revolving restaurant, perched 282 meters in the sky.",
@@ -191,25 +227,25 @@ export const  bookTicketDetails = [
 export const cardHighLightsDetails = [
     {
         id: uuidv4(),
-        image:"https://cdn-imgix.headout.com/tour/37161/TOUR-IMAGE/491ff3ba-1d10-40ce-baea-a45349e03afe-19083-kuala-lumpur-atmosphere-360-revolving-restaurant---dinner-buffet-01.jpg?auto=format&w=468.29999999999995&h=267.59999999999997&q=90&fit=crop&ar=7%3A4",
+        image: imgSkyHigh,
         title:"Sky-High Luxurious Buffet",
         desc:"Delight in glorious Buffets while floating above Kuala Lumpur's skyline, savoring a symphony of flavors with breathtaking views."
     },
     {
         id: uuidv4(),
-        image:"https://cdn-imgix.headout.com/tour/37159/TOUR-IMAGE/8c156b2b-4dd9-42de-815a-4278c15d6ef5-19082-kuala-lumpur-atmosphere-360-revolving-restaurant---lunch-buffet-05.jpg?auto=format&w=468.29999999999995&h=267.59999999999997&q=90&fit=crop&ar=7%3A4",
+        image: imgFifteen,
         title:"Revolving Enchantment",
         desc:"Be mesmerized by the spaceship-themed décor as the restaurant gently revolves, creating an otherworldly ambiance like dining among the stars."
     },  
     {
         id: uuidv4(),
-        image:"https://cdn-imgix.headout.com/media/images/b89724d62fe4d364d407003ae47882ac-Atmosphere%20360%208.jpg?auto=format&w=468.29999999999995&h=267.59999999999997&q=90&fit=crop&ar=7%3A4",
+        image: imgCelestial,
         title:"Celestial Culinary Artistry",
         desc:"Indulge in a culinary masterpiece crafted by expert chefs, where Malay delicacies showcase a harmonious blend of tradition and innovation."
     },  
     {
         id: uuidv4(),
-        image:"https://cdn-imgix.headout.com/media/images/1c1350fa86d7b75b164a1d0e731ed8bf-KL%20Tower%20Atmosphere%20360%202.jpg?auto=format&w=468.29999999999995&h=267.59999999999997&q=90&fit=crop&ar=7%3A4",
+        image: imgTen,
         title:"Window to Wonder",
         desc:"Upgrade to window seating and unlock a dazzling perspective of the city, elevating your dining experience to unparalleled heights."
     },  
@@ -234,19 +270,19 @@ export const homeBuffetOptions = [
         id: uuidv4(),
         title:"Lunch Buffet",
         desc:"Indulge in a delectable array of culinary delights during the Lunch Buffet at Atmosphere 360, offering a diverse selection of dishes to satisfy your midday cravings.",
-        image:"https://cdn-imgix.headout.com/media/images/552ab286b2d57d45d4bc1f06262adf7d-Atmosphere%20360%207.jpg?auto=format&w=468.29999999999995&h=267.59999999999997&q=90&fit=crop&ar=7%3A4"
+        image: lunchBuffet
     },
     {
         id: uuidv4(),
         title:"Hi-Tea Buffet",
         desc:"Treat yourself to an afternoon of delightful treats and savory bites at the Hi-Tea Buffet, where an assortment of sweet and savory delicacies awaits your palate.",
-        image:"https://cdn-imgix.headout.com/media/images/9cea8e28905d7495bb9ce5754bbc4753-Atmosphere%20360%206.jpg?auto=format&w=468.29999999999995&h=267.59999999999997&q=90&fit=crop&ar=7%3A4"
+        image: teaBuffet
     },
     {
         id: uuidv4(),
         title:"Dinner Buffet",
         desc:"Embark on a gastronomic journey during the Dinner Buffet, featuring an opulent spread of gourmet dishes amidst the enchanting ambiance of the revolving restaurant, creating a truly memorable dining experience.",
-        image:"https://cdn-imgix.headout.com/media/images/599371249228e052f2b7261ade412763-KL%20Tower%20Atmosphere%20360%204.jpg?auto=format&w=468.29999999999995&h=267.59999999999997&q=90&fit=crop&ar=7%3A4"
+        image: dinnerBuffet
     },
 ]
 
@@ -331,23 +367,23 @@ export const homeVisitPlanData = [
 export const homeFAQ = [
     {
         id: uuidv4(),
-        ques:"What makes Atmosphere 360 worth visiting?",
-        ans:"Atmosphere 360 offers a unique dining experience in a revolving restaurant with stunning panoramic views of the city."
+        ques:"Should I make an advance reservation for Atmosphere 360?",
+        ans:"Highly Recommended, advance reservations are welcome to confirm your preferred dining slot."
     },
     {
         id: uuidv4(),
-        ques:"Can I make a reservation in advance for Atmosphere 360?",
-        ans:"Yes, advance reservations are recommended to secure your preferred dining time."
+        ques:"How Can I request a window table at Atmosphere 360?",
+        ans:"Yes, you can request window Table during reservation/booking with extra charges."
     },
     {
         id: uuidv4(),
-        ques:"What are the opening hours of Atmosphere 360?",
-        ans:"Atmosphere 360 is open daily from 12 PM - 10 PM."
+        ques:"What is dress code for guest at Atmosphere 360?",
+        ans:"Recommended smart casual attire and no sandals allowed."
     },
     {
         id: uuidv4(),
-        ques:"When is the best time to visit Atmosphere 360?",
-        ans:"Evening hours offer a breathtaking view of the city's lights."
+        ques:"The best time to visit Atmosphere 360?",
+        ans:"The Dinner dining will be ideal to witness the City of Light."
     },
     {
         id: uuidv4(),
@@ -363,11 +399,6 @@ export const homeFAQ = [
         id: uuidv4(),
         ques:"Is there a dress code for visitors at Atmosphere 360?",
         ans:"Smart casual attire is recommended for a comfortable dining experience."
-    },
-    {
-        id: uuidv4(),
-        ques:"Can I request a window table at Atmosphere 360?",
-        ans:"Window tables are subject to availability and can be requested during reservation."
     },
     {
         id: uuidv4(),

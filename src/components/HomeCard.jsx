@@ -57,9 +57,7 @@ const HomeCard = ({data}) => {
   return (
     <div className="cardContainer">
         <div className="imageContainer">
-            <img src={image[0]} alt="" />
-            <img src={image[1]} alt="" />
-            <img src={image[2]} alt="" />
+            {data.image.map((ima) =>  <img key={ima} src={ima} alt="" />)}
         </div>
             <div className="content">
                 <h3>{title}</h3>

@@ -42,3 +42,14 @@
         }
     }
 }
+
+
+
+@media screen and (min-width: 1023px) {
+    .HomWhatIsTheBestMainContainer {
+            ul {
+                grid-template-columns: repeat(3,1fr);
+                overflow-x: unset;
+            }
+        }
+}

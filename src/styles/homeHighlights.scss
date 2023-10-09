@@ -12,9 +12,11 @@
     }
 
     .cardMainContainer{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(6,350px);
+        overflow-x: scroll;
         gap: 1.5rem;
+        padding-bottom: 1rem;
 
 
         .card{
@@ -22,6 +24,11 @@
             overflow: hidden;
             border: 1px solid $cardBorderColor;
             box-shadow: 1px 1px 10px 1px $cardBorderColor;
+            img{
+                height: 250px;
+                object-fit: cover;
+
+            }
 
 
             .content{
@@ -53,8 +60,6 @@
 
     
             .cardMainContainer {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
                 gap: 1.5rem;
     
     

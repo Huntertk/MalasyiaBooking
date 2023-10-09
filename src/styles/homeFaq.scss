@@ -19,14 +19,14 @@
 
         .questionNanswerContainer{
 
-            border-bottom: 1px solid $cardBorderColor;
-
             .questionContainer{
+                background-color: $primaryModalColor;
                 display: flex;
                 align-items: center;
                 cursor: pointer;
                 justify-content: space-evenly;
-                padding: 0.5rem 0;
+                padding: 0.5rem 1rem;
+                border-radius: 8px;
 
                 svg{
                     color: $primary;    
@@ -44,7 +44,8 @@
 
 
             .answer{
-                margin: 1rem 0;
+                background-color: $primaryModalColor;
+                padding: 1rem;
 
                 p{
                     font-weight: 300;

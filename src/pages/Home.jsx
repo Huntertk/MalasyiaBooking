@@ -22,7 +22,7 @@ const Home = () => {
       <HomeCardContainer />
       <HomeWhyVisit />
       <HomWhatIsTheBest />
-      <HomeTicketExplaination />
+      {/* <HomeTicketExplaination /> */}
       <HomeHighlights />
       <HomeBuffetOption />
       <HomeVisitPlan />

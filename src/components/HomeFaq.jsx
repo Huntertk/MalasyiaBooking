@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../styles/homeFaq.scss';
-import {AiOutlinePlusSquare, AiOutlineMinusSquare} from 'react-icons/ai';
+import {BiSolidChevronDownCircle, BiSolidChevronUpCircle} from 'react-icons/bi';
 import { homeFAQ } from '../data';
 
 
@@ -12,9 +12,9 @@ const QuestionContainer = ({data}) => {
                 <h2>{data.ques}</h2>
                 <div className="icon">
                    {isModalOpen ? 
-                   <AiOutlineMinusSquare/ >
+                   <BiSolidChevronUpCircle />
                    : 
-                   <AiOutlinePlusSquare/>
+                   <BiSolidChevronDownCircle/>
                 }
                 </div>
             </div>

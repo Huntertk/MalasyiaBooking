@@ -4,7 +4,6 @@ import {BsFillCaretDownFill} from 'react-icons/bs'
 import { navData } from '../data';
 
 const NavLinks = ({data}) => {
-    console.log(data);
     const [isNavOpen, setIsNavOpen] = useState(false)
 
     
