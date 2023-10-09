@@ -5,6 +5,7 @@ import 'react-day-picker/dist/style.css';
 import './day-picker.css';
 import { DayPicker } from 'react-day-picker';
 import {BiSolidDollarCircle} from 'react-icons/bi'
+import {motion} from 'framer-motion'
 
 const Calender = ({id}) =>{
     const [selectedDate, setSelectedDate] = useState(false)
@@ -52,12 +53,24 @@ const Calender = ({id}) =>{
 
 
 const HomeCard = ({data}) => {
-    console.log(data);
+     const popUpAnimation = {
+     initial:{
+            scale:0,
+            opacity:0
+        },
+        whileInView:{
+            scale:1,
+            opacity:1
+        },
+        transition:{
+            duration:0.3
+        }
+  }
     const {image, id, title, desc} = data;
   return (
-    <div className="cardContainer">
+    <motion.div {...popUpAnimation} className="cardContainer">
         <div className="imageContainer">
-            {data.image.map((ima) =>  <img key={ima} src={ima} alt="" />)}
+            {data.image.map((ima) =>  <motion.img {...popUpAnimation} key={ima} src={ima} alt="" />)}
         </div>
             <div className="content">
                 <h3>{title}</h3>
@@ -75,7 +88,7 @@ const HomeCard = ({data}) => {
                 </div>
             </div>
             </div>
-        </div>
+        </motion.div>
   )
 }
 

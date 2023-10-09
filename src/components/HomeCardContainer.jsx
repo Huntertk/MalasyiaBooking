@@ -4,7 +4,7 @@ import { cardData } from '../data'
 import HomeCard from './HomeCard';
 
 
-const HomeCardContainer = () => {
+const HomeCardContainer = () => { 
   return (
     <section className='HomeCardMainContainer'>
         {cardData.map((data) => {
