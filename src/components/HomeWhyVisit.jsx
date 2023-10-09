@@ -1,23 +1,10 @@
 import React from 'react'
 import '../styles/homeWhyVisit.scss'
-import {motion} from 'framer-motion'
 
 const HomeWhyVisit = () => {
-    const easingItemFromLeft = {
-     initial:{
-            x:"-100%",
-            opacity:0
-        },
-        whileInView:{
-            x:0,
-            opacity:1
-        },
-        transition:{
-            delay:0.5
-        }
-  }
+  
   return (
-    <motion.section {...easingItemFromLeft} className='whyVisitMainComponents'>
+    <section className='whyVisitMainComponents'>
         
         <h1>Why Visit Atmosphere 360?</h1>
         <div className="whyVisitCardContainer">
@@ -41,7 +28,7 @@ const HomeWhyVisit = () => {
                     </p>
             </div>
         </div>
-    </motion.section>
+    </section>
   )
 }
 

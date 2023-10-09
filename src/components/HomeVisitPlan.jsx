@@ -1,24 +1,11 @@
 import React, { useState } from 'react'
 import '../styles/homeVisistPlan.scss'
-import { motion } from 'framer-motion'
 import { homeVisitPlanData } from '../data';
 
 const Cards = ({data}) => {
-    const popUpAnimation = {
-     initial:{
-            scale:0,
-            opacity:0
-        },
-        whileInView:{
-            scale:1,
-            opacity:1
-        },
-        transition:{
-            duration:0.3
-        }
-  }
+
     return  (
-          <motion.div {...popUpAnimation} className="card">
+          <div className="card">
                 <img src={data.image} alt="" />
                 <div className="content">
                     <ul>
@@ -27,7 +14,7 @@ const Cards = ({data}) => {
                     })}
                     </ul>
                 </div>
-            </motion.div>
+            </div>
     )
 }
 

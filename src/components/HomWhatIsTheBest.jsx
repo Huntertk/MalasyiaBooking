@@ -1,23 +1,10 @@
 import React from 'react'
 import '../styles/homeWhatIsTheBest.scss'
-import {motion} from 'framer-motion'
 
 const HomWhatIsTheBest = () => {
-      const easingItemFromLeft = {
-     initial:{
-            x:"-100%",
-            opacity:0
-        },
-        whileInView:{
-            x:0,
-            opacity:1
-        },
-        transition:{
-            delay:0.5
-        }
-  }
+     
   return (
-    <motion.section {...easingItemFromLeft} className='HomWhatIsTheBestMainContainer'>
+    <section className='HomWhatIsTheBestMainContainer'>
         <h1>What Is The Best Way To Buy Atmosphere 360 Tickets? Book Online</h1>
         <p>For a seamless and hassle-free experience, the best way to buy Atmosphere 360 tickets is through online booking. Embrace the convenience and benefits of securing your reservation in advance.</p>
         <ul>
@@ -35,7 +22,7 @@ const HomWhatIsTheBest = () => {
             </li>
             
         </ul>
-    </motion.section>
+    </section>
   )
 }
 
