@@ -394,29 +394,4 @@ export const homeFAQ = [
         ques:"The best time to visit Atmosphere 360?",
         ans:"The Dinner dining will be ideal to witness the City of Light."
     },
-    {
-        id: uuidv4(),
-        ques:"How much time should I allocate for the visit to Atmosphere 360?",
-        ans:"Plan for about 2-3 hours to enjoy the dining experience and the view."
-    },
-    {
-        id: uuidv4(),
-        ques:"What are the dining options available at Atmosphere 360?",
-        ans:"Atmosphere 360 offers buffet and à la carte dining options."
-    },
-    {
-        id: uuidv4(),
-        ques:"Is there a dress code for visitors at Atmosphere 360?",
-        ans:"Smart casual attire is recommended for a comfortable dining experience."
-    },
-    {
-        id: uuidv4(),
-        ques:"Are there any rules to follow inside Atmosphere 360?",
-        ans:"Guests are advised to maintain decorum and follow staff instructions for a pleasant experience."
-    },
-    {
-        id: uuidv4(),
-        ques:"Is Wi-Fi available for visitors at Atmosphere 360?",
-        ans:"Yes, complimentary Wi-Fi is provided for guests."
-    },
 ]
