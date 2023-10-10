@@ -6,6 +6,7 @@ import {IoReorderThreeOutline} from 'react-icons/io5'
 import {RxCross1} from 'react-icons/rx'
 import SmallSidebar from './SmallSidebar'
 import BigNavbar from './BigNavbar'
+import { Link } from 'react-router-dom'
 const Header = () => {
 
 
@@ -18,7 +19,7 @@ const Header = () => {
     <header>
         <nav >
             <div className="logoContainer">
-                <img src={logo} alt="" />
+               <Link to="/"> <img src={logo} alt="" /> </Link>
             </div>
             <div className='headerSideContainer'>
                     <GoGlobe />

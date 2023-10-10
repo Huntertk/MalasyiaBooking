@@ -5,6 +5,7 @@ import 'react-day-picker/dist/style.css';
 import './day-picker.css';
 import { DayPicker } from 'react-day-picker';
 import {BiSolidDollarCircle} from 'react-icons/bi'
+import { Link } from 'react-router-dom';
 
 const Calender = ({id}) =>{
     const [selectedDate, setSelectedDate] = useState(false)
@@ -65,7 +66,7 @@ const HomeCard = ({data}) => {
                 <Calender id={id} />
             </div>
             <div className="cardBtnContainer">
-                <button className='checkAvailability'>Book Now</button>
+                <Link to="/date-confirm" className='checkAvailability'> Book Now</Link>
             <div className="cancelPolicy">
                 <BiSolidDollarCircle />
                 <div className="cancelPolicyContent">

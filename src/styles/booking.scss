@@ -1,0 +1,6 @@
+@use './variables.scss' as *;
+
+.bookingMainContainer{
+    max-width: $maxWidth;
+    margin: 4rem auto;
+}
