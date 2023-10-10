@@ -3,4 +3,71 @@
 .bookingMainContainer{
     max-width: $maxWidth;
     margin: 4rem auto;
+
+    .bookingWrapper{
+        padding: 1rem;
+        h1{
+            text-align: center;
+        }
+
+        .detailsWrapper{
+            margin: 1rem 0;
+            p{
+                font-weight: 600;
+            }
+
+            .guestQuantity{
+                display: flex;
+                flex-direction: column;
+                margin: 0.5rem 0;
+                gap: 20px;
+                box-shadow: 1px 1px 10px 1px $cardBorderColor;
+                padding: 1rem;
+                border-radius: 8px;
+                .guest{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 1px solid $cardBorderColor;
+                    padding-bottom: 0.5rem;
+                }
+                .guest:nth-child(2){
+                    border: 0;
+                }
+            }
+
+            form{
+                margin: 2rem 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                button{
+                    background-color: $primary;
+                    border: 1px solid $primaryModalColor;
+                    padding: 0.5rem 1rem;
+                    color: #fff;
+                    border-radius: 8px;
+                    margin: 1rem 0;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    box-shadow: 1px 1px 10px 2px $cardBorderColor;
+                }
+
+                input{
+                    padding: 0.5rem 1rem;
+                    border-radius: 8px;
+                    border: none;
+                    outline: none;
+                    background-color: $primaryModalColor;
+                    box-shadow: 1px 1px 10px 1px $cardBorderColor;
+                    
+                    &:active,
+                    &:focus{
+                        border: 1px solid $primary;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -13,20 +13,21 @@ const Booking = () => {
                         <p>1 Adult</p>
                         <span>MYR 199</span>
                     </div>
-                    <div className="total">
+                    <div className="guest">
                         <p>Total Payable</p>
                         <span>MYR 199</span>
                     </div>
                 </div>
                 <form >
                     <label htmlFor="name">Full Name</label>
-                    <input type="text" id='name' />
+                    <input type="text" id='name'   autoComplete="off" required/>
                     <label htmlFor="phone">Mobile Number</label>
-                    <input type="number" id="phone" />
+                    <input type="number" id="phone" placeholder='+60XXXXXXXX'  autoComplete="off" required/>
                     <label htmlFor="email">Email</label>
-                    <input type="email" id='email' />
+                    <input type="email" id='email' autoComplete="off" required />
                     <label htmlFor="cemail">Confirm Email</label>
-                    <input type="email" id='cemail' />
+                    <input type="email" id='cemail' autoComplete="off" required />
+                    <button>Pay Now</button>
                 </form>
             </div>
         </div>
