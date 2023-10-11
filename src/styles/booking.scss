@@ -30,10 +30,17 @@
                     justify-content: space-between;
                     border-bottom: 1px solid $cardBorderColor;
                     padding-bottom: 0.5rem;
+
+                    p{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 10px;
+                    }
                 }
-                .guest:nth-child(2){
-                    border: 0;
-                }
+                // .guest:nth-child(2){
+                //     border: 0;
+                // }
             }
 
             form{
