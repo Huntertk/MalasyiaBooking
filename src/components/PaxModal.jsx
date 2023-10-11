@@ -128,7 +128,10 @@ const PaxModal = ({selectedDate, setModalOpen}) => {
             {
                 selectedDate && <>
                 <p>{format(selectedDate, 'PPP')}  </p> 
-                <Link to="/booking"><button>Next</button></Link>
+                {
+                    adultCount || childCount || infantCount || seniorCount ?
+                <Link to="/booking"><button>Next</button></Link> : ""
+                }
                 </>
             }
         </div>
