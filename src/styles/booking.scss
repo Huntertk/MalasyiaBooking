@@ -96,3 +96,23 @@
         }
     }
 }
+
+
+
+@media screen and (min-width: 763px) {
+.bookingMainContainer {
+        max-width: $maxWidth;
+        margin: 4rem auto;
+        width: 40%;
+
+        .bookingWrapper {
+            text-align: center;
+            img {
+                width: 450px;
+            }
+                form {
+                    text-align: start;
+                }
+            }
+        }
+    }

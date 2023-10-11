@@ -28,23 +28,36 @@ const Booking = () => {
                 </div>
                  
                 <div className="guestQuantity">
-                    <div className="guest">
-                        <p>1 Adult <span> X {adultCount}</span>
-                        </p>
-                        <span>MYR {adultTotal}</span>
-                    </div>
-                    <div className="guest">
-                        <p>2 Child <span> X {childCount}</span></p>
+                    {
+                        adultCount === 0 ? "" :
+                        <div className="guest">
+                            <p> Adult <span> X {adultCount}</span>
+                            </p>
+                            <span>MYR {adultTotal}</span>
+                        </div>
+                    }
+                    {
+                        childCount === 0 ? "" : <div className="guest">
+                        <p> Child <span> X {childCount}</span></p>
                         <span>MYR {childTotal}</span>
                     </div>
-                    <div className="guest">
-                        <p>3 Infant <span> X {infantCount}</span></p>
+                    }
+
+                    {
+                        infantCount === 0 ? "" : <div className="guest">
+                        <p> Infant <span> X {infantCount}</span></p>
                         <span>MYR {infantTotal}</span>
                     </div>
-                    <div className="guest">
-                        <p>4 Senior <span> X {seniorCount}</span></p>
+                    }
+                    
+                    {
+                        seniorCount === 0 ? "" : <div className="guest">
+                        <p> Senior <span> X {seniorCount}</span></p>
                         <span>MYR {seniorTotal}</span>
                     </div>
+                    }
+                    
+                    
                     <div className="guest">
                         <p className='totalPayable'>Total Payable</p>
                         <span className='totalPayable'>MYR {seniorTotal + infantTotal + childTotal + adultTotal}</span>
