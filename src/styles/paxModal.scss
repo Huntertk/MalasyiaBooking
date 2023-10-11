@@ -31,11 +31,11 @@
         width: 100%;
 
         .pax{
-            // display: grid;
-            // grid-template-columns: 1fr 80px 1fr;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr 100px 1fr;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
             gap: 10px;
             padding: 1rem;
             align-content: center;
