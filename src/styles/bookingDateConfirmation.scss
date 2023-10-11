@@ -36,6 +36,9 @@
                 border: none;
                 outline: none;
             }
+            .moreDates{
+                padding: 1rem;
+            }
             .active {
                 color: #fff;
                 background-color: $primary;
@@ -53,6 +56,7 @@
                 background-color: $primary;
                 border-radius: 8px;
                 padding: 0.5rem 1rem;
+                font-size: 1.2rem;
                 border: none;
                 outline: none;
             }

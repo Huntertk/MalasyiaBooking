@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/booking.scss'
+import image from '../assets/images/IMGNINE.jpg'
 import { useBookingContext } from '../context/BookingContex'
 import { format } from 'date-fns';
 const Booking = () => {
@@ -17,9 +18,10 @@ const Booking = () => {
   return (
     <section className='bookingMainContainer'>
         <div className="bookingWrapper">
+            <img src={image} alt="" />
             <h1>Confirm and Pay</h1>
             <div className="detailsWrapper">
-                 {format(bookingDate, 'PPP')}
+                 {bookingDate && format(bookingDate, 'PPP')}
                 <div className="guestQuantity">
                     <div className="guest">
                         <p>1 Adult <span> X {adultCount}</span>

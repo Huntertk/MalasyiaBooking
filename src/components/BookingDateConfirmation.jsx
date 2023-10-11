@@ -56,7 +56,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
                 {days[day + 3]}
             </span>
             </button>
-           <button className={calenderOpen ? "active" : ""} onClick={() => setCalenderOpen(prev => !prev)}>More Dates</button>
+           <button className={calenderOpen ? "moreDates active" : "moreDates"} onClick={() => setCalenderOpen(prev => !prev)}>More Dates</button>
         </div>
     )
 }
