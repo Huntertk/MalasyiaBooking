@@ -4,7 +4,7 @@ import 'react-day-picker/dist/style.css';
 import './day-picker.css';
 import { format,differenceInCalendarDays } from 'date-fns';
 import PaxModal from './PaxModal';
-import { SET_BOOKING_DATE, useBookingContext } from '../context/BookingContex';
+import { SET_BOOKING_DATE, SET_PAX_MODAL, useBookingContext } from '../context/BookingContex';
 import { DayPicker, Row } from 'react-day-picker';
 
 
@@ -75,8 +75,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
 const BookingDateConfirmation = () => {
         const [selectedDate, setSelectedDate] = useState("")
         const [calenderOpen, setCalenderOpen] = useState(false)
-        const [modalOpen, setModalOpen] = useState(false)
-        const {bookingDate, dispatch} = useBookingContext()
+        const {bookingDate, dispatch,isPaxModal} = useBookingContext()
         console.log(bookingDate);
   return (
     <section className='bookingDateConfirmationMainContainer'>
@@ -106,14 +105,14 @@ const BookingDateConfirmation = () => {
                     <p>You selected {format(selectedDate, 'PPP')}.</p>
                     <button onClick={() => {
                         dispatch({type: SET_BOOKING_DATE, payload: selectedDate})
-                        setModalOpen(true)
+                        dispatch({type: SET_PAX_MODAL})
                     }}>Next</button>
                     </> : <p>Select One Date</p>
                 }
             </div>
         </div>
         {
-            modalOpen && <PaxModal setModalOpen={setModalOpen} selectedDate={selectedDate} />
+            isPaxModal && <PaxModal  selectedDate={selectedDate} />
         }
         
     </section>

@@ -4,6 +4,7 @@ import image from '../assets/images/IMGNINE.jpg'
 import { useBookingContext } from '../context/BookingContex'
 import { format } from 'date-fns';
 import {BiEditAlt} from 'react-icons/bi'
+import { Link } from 'react-router-dom';
 const Booking = () => {
     const {
         adultCount,
@@ -24,7 +25,7 @@ const Booking = () => {
             <div className="detailsWrapper">
                 <div className="topContainer">
                     <p>{bookingDate && format(bookingDate, 'PPP')}</p>
-                    <BiEditAlt />
+                    <Link to="/date-confirm"><BiEditAlt /></Link>
                 </div>
                  
                 <div className="guestQuantity">

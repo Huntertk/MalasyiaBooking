@@ -15,6 +15,7 @@ export const SET_CHILD_TOTAL = 'SET_CHILD_TOTAL'
 export const SET_INFANT_TOTAL = 'SET_INFANT_TOTAL'
 export const SET_SENIOR_TOTAL = 'SET_SENIOR_TOTAL'
 export const SET_BOOKING_DATE = 'SET_BOOKING_DATE'
+export const SET_PAX_MODAL = 'SET_PAX_MODAL'
 
 const initailState = {
     adultCount:0,
@@ -25,7 +26,8 @@ const initailState = {
     childTotal: 0,
     infantTotal: 0,
     seniorTotal: 0,
-    bookingDate: ""
+    bookingDate: "",
+    isPaxModal: false
 }
 
 console.log(initailState);
@@ -96,6 +98,12 @@ const reducer = (state, action) => {
             return{
                 ...state,
                 bookingDate: action.payload
+            }
+        }
+        case SET_PAX_MODAL:{
+            return{
+                ...state,
+                isPaxModal: !state.isPaxModal
             }
         }
         default:

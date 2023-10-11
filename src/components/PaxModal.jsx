@@ -16,7 +16,8 @@ import {
     SET_CHILD_TOTAL,
     SET_SENIOR_TOTAL,
     SET_INFANT_TOTAL,
-    useBookingContext 
+    useBookingContext, 
+    SET_PAX_MODAL
 } from '../context/BookingContex';
 
 
@@ -53,7 +54,7 @@ const Pax = ({category, ageText, price,count, dispatch, actionType}) => {
     )
 }
 
-const PaxModal = ({selectedDate, setModalOpen}) => {
+const PaxModal = ({selectedDate}) => {
     const {
         adultCount, 
         childCount, 
@@ -63,11 +64,13 @@ const PaxModal = ({selectedDate, setModalOpen}) => {
         childTotal,
         infantTotal,
         seniorTotal,
-        dispatch
+        dispatch,
+        bookingDate
+        
     } = useBookingContext()
   return (
     <div className='paxSelectorContainer'>
-        <button  className='crossIcon' onClick={() => setModalOpen(false)}>Cancel</button>
+        <button  className='crossIcon' onClick={() => dispatch({type: SET_PAX_MODAL})}>Cancel</button>
         <h1>Select number of tickets</h1>
         <div className="paxSelector">
             <Pax  
@@ -126,8 +129,8 @@ const PaxModal = ({selectedDate, setModalOpen}) => {
                
         <div className="dateContainer">
             {
-                selectedDate && <>
-                <p>{format(selectedDate, 'PPP')}  </p> 
+                bookingDate && <>
+                <p>{format(bookingDate, 'PPP')}  </p> 
                 {
                     adultCount || childCount || infantCount || seniorCount ?
                 <Link to="/booking"><button>Next</button></Link> : ""
