@@ -2,10 +2,21 @@ import React, { useState } from 'react'
 import '../styles/bookingDateConfirmation.scss'
 import 'react-day-picker/dist/style.css';
 import './day-picker.css';
-import { DayPicker } from 'react-day-picker';
-import { format } from 'date-fns';
+import { format,differenceInCalendarDays } from 'date-fns';
 import PaxModal from './PaxModal';
 import { SET_BOOKING_DATE, useBookingContext } from '../context/BookingContex';
+import { DayPicker, Row } from 'react-day-picker';
+
+
+function isPastDate(date) {
+  return differenceInCalendarDays(date, new Date()) < 0;
+}
+
+function OnlyFutureRow(props) {
+  const isPastRow = props.dates.every(isPastDate);
+  if (isPastRow) return <></>;
+  return <Row {...props} />;
+}
 
 const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) => {
     let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"]
@@ -82,6 +93,9 @@ const BookingDateConfirmation = () => {
             style={calenderOpen === false && {display:'none'}}
             mode="single"
             selected={selectedDate} 
+            fromDate={new Date()}
+      components={{ Row: OnlyFutureRow }}
+      hidden={isPastDate}
             showOutsideDays
             onSelect={setSelectedDate}
             />
