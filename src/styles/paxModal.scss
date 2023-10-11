@@ -11,10 +11,12 @@
     padding: 1rem;
 
     .crossIcon{
+        background-color: transparent;
         display: block;
         margin-left: auto;
-        font-size: 2rem;
-        color: #ff0000;
+        font-size: 1rem;
+        color: $primary;
+        border: 0;
     }
 
     h1{
@@ -72,15 +74,17 @@
         }
     }
 
+    .totalPayable,
     .dateContainer{
         display: flex;
         margin-top: 2rem;
         align-items: center;
         justify-content: space-between;
-        p{
+        span, p{
             font-size: 1.2rem;
             font-weight: 600;
         }
+        
 
         button{
             font-size: 1.2rem;
