@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/booking.scss'
 import { useBookingContext } from '../context/BookingContex'
-
+import { format } from 'date-fns';
 const Booking = () => {
     const {
         adultCount,
@@ -11,14 +11,15 @@ const Booking = () => {
         adultTotal, 
         childTotal, 
         infantTotal, 
-        seniorTotal
+        seniorTotal,
+        bookingDate
     } = useBookingContext()
   return (
     <section className='bookingMainContainer'>
         <div className="bookingWrapper">
             <h1>Confirm and Pay</h1>
             <div className="detailsWrapper">
-                <p>Date Tue, Oct 10, 2023</p>
+                 {format(bookingDate, 'PPP')}
                 <div className="guestQuantity">
                     <div className="guest">
                         <p>1 Adult <span> X {adultCount}</span>

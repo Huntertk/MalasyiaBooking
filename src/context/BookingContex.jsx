@@ -14,6 +14,7 @@ export const SET_ADULT_TOTAL = 'SET_ADULT_TOTAL'
 export const SET_CHILD_TOTAL = 'SET_CHILD_TOTAL'
 export const SET_INFANT_TOTAL = 'SET_INFANT_TOTAL'
 export const SET_SENIOR_TOTAL = 'SET_SENIOR_TOTAL'
+export const SET_BOOKING_DATE = 'SET_BOOKING_DATE'
 
 const initailState = {
     adultCount:0,
@@ -24,6 +25,7 @@ const initailState = {
     childTotal: 0,
     infantTotal: 0,
     seniorTotal: 0,
+    bookingDate: ""
 }
 
 console.log(initailState);
@@ -90,7 +92,12 @@ const reducer = (state, action) => {
                 ...state,
                 seniorTotal: 150 * state.seniorCount
             }    
-    
+        case SET_BOOKING_DATE:{
+            return{
+                ...state,
+                bookingDate: action.payload
+            }
+        }
         default:
           return state
     }
