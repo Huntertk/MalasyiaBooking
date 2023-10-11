@@ -46,8 +46,8 @@ const Booking = () => {
                         <span>MYR {seniorTotal}</span>
                     </div>
                     <div className="guest">
-                        <p>Total Payable</p>
-                        <span>MYR {seniorTotal + infantTotal + childTotal + adultTotal}</span>
+                        <p className='totalPayable'>Total Payable</p>
+                        <span className='totalPayable'>MYR {seniorTotal + infantTotal + childTotal + adultTotal}</span>
                     </div>
                 </div>
                 <form >
