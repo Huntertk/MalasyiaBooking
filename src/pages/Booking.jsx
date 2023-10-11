@@ -3,6 +3,7 @@ import '../styles/booking.scss'
 import image from '../assets/images/IMGNINE.jpg'
 import { useBookingContext } from '../context/BookingContex'
 import { format } from 'date-fns';
+import {BiEditAlt} from 'react-icons/bi'
 const Booking = () => {
     const {
         adultCount,
@@ -21,7 +22,11 @@ const Booking = () => {
             <img src={image} alt="" />
             <h1>Confirm and Pay</h1>
             <div className="detailsWrapper">
-                 {bookingDate && format(bookingDate, 'PPP')}
+                <div className="topContainer">
+                    <p>{bookingDate && format(bookingDate, 'PPP')}</p>
+                    <BiEditAlt />
+                </div>
+                 
                 <div className="guestQuantity">
                     <div className="guest">
                         <p>1 Adult <span> X {adultCount}</span>

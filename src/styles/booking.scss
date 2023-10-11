@@ -17,8 +17,18 @@
 
         .detailsWrapper{
             margin: 1rem 0;
-            p{
-                font-weight: 600;
+            .topContainer{
+                padding-left: 1rem;
+                padding-right: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p{
+                    font-weight: 600;
+                }
+                svg{
+                    font-size: 1.2rem;
+                }
             }
 
             .guestQuantity{

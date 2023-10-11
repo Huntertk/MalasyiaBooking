@@ -61,10 +61,15 @@
                 p{
                     font-size: 1.4rem;
                 }
+              
 
                 svg{
                     color: $primary;
                     font-size: 2rem;
+                }
+                .disabledBtn {
+                    color: #808080;
+                    cursor: not-allowed;
                 }
             }
             .price{
