@@ -1,22 +1,28 @@
 import React from 'react'
 import '../styles/booking.scss'
 import image from '../assets/images/IMGNINE.jpg'
-import { useBookingContext } from '../context/BookingContex'
 import { format } from 'date-fns';
 import {BiEditAlt} from 'react-icons/bi'
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const Booking = () => {
     const {
-        adultCount,
+        bookingDate, 
+        adultCount, 
+        adultTotal,
         childCount,
+        childTotal,
         infantCount,
+        infantTotal,
         seniorCount,
-        adultTotal, 
-        childTotal, 
-        infantTotal, 
         seniorTotal,
-        bookingDate
-    } = useBookingContext()
+        totalAmount
+    } = useSelector(store => store.booking)
+    
+
+    if(totalAmount === 0) {
+        return <Navigate to ="/date-confirm" />
+    }
   return (
     <section className='bookingMainContainer'>
         <div className="bookingWrapper">
@@ -24,7 +30,7 @@ const Booking = () => {
             <h1>Confirm and Pay</h1>
             <div className="detailsWrapper">
                 <div className="topContainer">
-                    <p>{bookingDate && format(bookingDate, 'PPP')}</p>
+                    <p>{bookingDate}</p>
                     <Link to="/date-confirm"><BiEditAlt /></Link>
                 </div>
                  

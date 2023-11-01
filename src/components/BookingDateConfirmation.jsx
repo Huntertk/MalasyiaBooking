@@ -4,8 +4,9 @@ import 'react-day-picker/dist/style.css';
 import './day-picker.css';
 import { format,differenceInCalendarDays } from 'date-fns';
 import PaxModal from './PaxModal';
-import { SET_BOOKING_DATE, SET_PAX_MODAL, useBookingContext } from '../context/BookingContex';
 import { DayPicker, Row } from 'react-day-picker';
+import { useDispatch, useSelector } from 'react-redux';
+import { openPaxModel, setBookingDate } from '../features/booking/bookingSlice';
 
 
 function isPastDate(date) {
@@ -73,10 +74,10 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
 }
 
 const BookingDateConfirmation = () => {
+    const dispatch = useDispatch()
+    const {isPaxModal, bookingDate} = useSelector(store => store.booking)
         const [selectedDate, setSelectedDate] = useState("")
         const [calenderOpen, setCalenderOpen] = useState(false)
-        const {bookingDate, dispatch,isPaxModal} = useBookingContext()
-        console.log(bookingDate);
   return (
     <section className='bookingDateConfirmationMainContainer'>
         <div className="bookingDateWrapper">
@@ -104,16 +105,16 @@ const BookingDateConfirmation = () => {
                     selectedDate ? <>
                     <p>You selected {format(selectedDate, 'PPP')}.</p>
                     <button onClick={() => {
-                        dispatch({type: SET_BOOKING_DATE, payload: selectedDate})
-                        dispatch({type: SET_PAX_MODAL})
+                        dispatch(setBookingDate(format(selectedDate, 'PPP')))
+                        dispatch(openPaxModel())
                     }}>Next</button>
                     </> : <p>Select One Date</p>
                 }
             </div>
         </div>
-        {
-            isPaxModal && <PaxModal  selectedDate={selectedDate} />
-        }
+        
+       { isPaxModal && <PaxModal  selectedDate={selectedDate} />}
+        
         
     </section>
   )

@@ -1,36 +1,38 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/paxModal.scss'
-import { format } from 'date-fns';
 import {AiOutlinePlusCircle, AiOutlineMinusCircle} from 'react-icons/ai'
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { 
-    SET_ADULT_COUNT_INCREASE, 
-    SET_ADULT_COUNT_DECREASE ,
-    SET_CHILD_COUNT_DECREASE,
-    SET_CHILD_COUNT_INCREASE,
-    SET_INFANT_COUNT_DECREASE,
-    SET_INFANT_COUNT_INCREASE,
-    SET_SENIOR_COUNT_DECREASE,
-    SET_SENIOR_COUNT_INCREASE,
-    SET_ADULT_TOTAL,
-    SET_CHILD_TOTAL,
-    SET_SENIOR_TOTAL,
-    SET_INFANT_TOTAL,
-    useBookingContext, 
-    SET_PAX_MODAL
-} from '../context/BookingContex';
+    adultCountIncrease, 
+    adultCountDecrease, 
+    childCountIncrease, 
+    childCountDecrease,
+    infantCountDecrease,
+    infantCountIncrease,
+    seniorCountDecrease,
+    seniorCountIncrease,
+    adultTotalAmount,
+    childTotalAmount,
+    infantTotalAmount,
+    seniorTotalAmount,
+    countTotalBookingAmount,
+    closePaxModel,
+    cancelBooking
+} from '../features/booking/bookingSlice';
 
 
-const Pax = ({category, ageText, price,count, dispatch, actionType}) => {
-    console.log(count);
+
+const Pax = ({category, ageText, price, count, actionType, total}) => {
+    const dispatch = useDispatch()
+    
     const handleIncrese = () => {
-        dispatch({type: actionType.increase})
-        dispatch({type: actionType.totalAmt})
+        dispatch(actionType.increase())
     }
     
     const handleDecrease = () => {
-        dispatch({type: actionType.decrease})
-        dispatch({type: actionType.totalAmt})
+
+        dispatch(actionType.decrease())
     }    
     return (
          <div className="pax">
@@ -40,15 +42,18 @@ const Pax = ({category, ageText, price,count, dispatch, actionType}) => {
                 </p>
                 <div className="btnContainer">
                     {
-                        count < 1 ?  <AiOutlineMinusCircle className='disabledBtn' /> : <AiOutlineMinusCircle onClick={handleDecrease} />
-
+                        count === 0 ? <AiOutlineMinusCircle className='disabledBtn'  /> : <AiOutlineMinusCircle onClick={handleDecrease} />
                     }
+                    
+                    <p>{count}</p>
 
-                    <span>{count}</span>
-                    <AiOutlinePlusCircle onClick={handleIncrese} />
+                    {
+                        count === 5 ? <AiOutlinePlusCircle className='disabledBtn' /> : <AiOutlinePlusCircle onClick={handleIncrese} />
+                    }
+                    
                 </div>
                 <div className="price">
-                    <span>MYR {count * price}</span>
+                    <span>MYR {total}</span>
                 </div>
             </div>
     )
@@ -58,19 +63,30 @@ const PaxModal = ({selectedDate}) => {
     const {
         adultCount, 
         childCount, 
-        infantCount, 
+        infantCount,
         seniorCount,
         adultTotal,
-        childTotal,
+        childTotal, 
         infantTotal,
         seniorTotal,
-        dispatch,
+        totalAmount,
         bookingDate
-        
-    } = useBookingContext()
+    } = useSelector((store) => store.booking)
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(adultTotalAmount())
+        dispatch(childTotalAmount())
+        dispatch(infantTotalAmount())
+        dispatch(seniorTotalAmount())
+        dispatch(countTotalBookingAmount())
+
+    },[adultCount, childCount, seniorCount, infantCount])
+
   return (
     <div className='paxSelectorContainer'>
-        <button  className='crossIcon' onClick={() => dispatch({type: SET_PAX_MODAL})}>Cancel</button>
+        <button  className='crossIcon' onClick={() => dispatch(cancelBooking())}>Cancel</button>
         <h1>Select number of tickets</h1>
         <div className="paxSelector">
             <Pax  
@@ -78,65 +94,59 @@ const PaxModal = ({selectedDate}) => {
             ageText={"13 to 59 yrs"} 
             price={199}
             count={adultCount}
-            dispatch={dispatch}
             actionType={{
-                increase: SET_ADULT_COUNT_INCREASE, 
-                decrease: SET_ADULT_COUNT_DECREASE,
-                totalAmt: SET_ADULT_TOTAL
+                increase: adultCountIncrease,
+                decrease: adultCountDecrease
             }}
+            total={adultTotal}
              />
             <Pax  
             category ={"Child"} 
             ageText={"6 to 12 yrs"} 
-            price={150} 
+            price={150}
             count={childCount}
-            dispatch={dispatch}
             actionType={{
-               increase: SET_CHILD_COUNT_INCREASE,
-               decrease: SET_CHILD_COUNT_DECREASE, 
-               totalAmt: SET_CHILD_TOTAL
+                increase: childCountIncrease,
+                decrease: childCountDecrease
             }}
+            total={childTotal}
             />
             <Pax  
             category ={"Infant"} 
             ageText={"2 to 5 yrs"} 
             price={50} 
             count={infantCount}
-            dispatch={dispatch}
             actionType={{
-                increase: SET_INFANT_COUNT_INCREASE,
-                decrease: SET_INFANT_COUNT_DECREASE, 
-                totalAmt: SET_INFANT_TOTAL
+                increase: infantCountIncrease,
+                decrease: infantCountDecrease
             }}
+            total={infantTotal}
             />
             <Pax  
             category ={"Senior"} 
             ageText={"Above 59 yrs"} 
             price={150} 
             count={seniorCount}
-            dispatch={dispatch}
             actionType={{
-               increase: SET_SENIOR_COUNT_INCREASE,
-               decrease: SET_SENIOR_COUNT_DECREASE, 
-               totalAmt: SET_SENIOR_TOTAL
+                increase: seniorCountIncrease,
+                decrease: seniorCountDecrease
             }}
+            total={seniorTotal}
             />
         </div>
             <div className="totalPayable">
                 <span>Total</span>
-               <span>MYR {adultTotal + childTotal + infantTotal + seniorTotal}</span>
+               <span>MYR {totalAmount}</span>
             </div>
                
         <div className="dateContainer">
-            {
-                bookingDate && <>
-                <p>{format(bookingDate, 'PPP')}  </p> 
+                <p>{bookingDate}  </p> 
                 {
-                    adultCount || childCount || infantCount || seniorCount ?
-                <Link to="/booking"><button>Next</button></Link> : ""
+                    totalAmount > 0 &&
+                    <Link to="/booking"><button>Next</button></Link> 
+
                 }
-                </>
-            }
+            
         </div>
     </div>
   )
