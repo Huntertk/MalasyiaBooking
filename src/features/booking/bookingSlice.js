@@ -54,18 +54,23 @@ const bookingSlice = createSlice({
         },
         adultTotalAmount: (state) => {
             state.adultTotal = state.adultCount * 199
+            setBookingDetailsFromLocalStorage(state)
         },
         childTotalAmount: (state) => {
             state.childTotal = state.childCount * 150
+            setBookingDetailsFromLocalStorage(state)
         },
         infantTotalAmount: (state) => {
             state.infantTotal = state.infantCount * 50
+            setBookingDetailsFromLocalStorage(state)
         },
         seniorTotalAmount: (state) => {
             state.seniorTotal = state.seniorCount * 150
+            setBookingDetailsFromLocalStorage(state)
         },
         countTotalBookingAmount: (state) => {
             state.totalAmount = state.adultTotal + state.childTotal + state.infantTotal + state.seniorTotal
+            setBookingDetailsFromLocalStorage(state)
         },
         setBookingDate: (state, action) => {
             state.bookingDate = action.payload
@@ -78,8 +83,8 @@ const bookingSlice = createSlice({
             state.isPaxModal = false
         }, 
         cancelBooking: (state) => {
-            state = initialState
-            setBookingDetailsFromLocalStorage(state)
+            setBookingDetailsFromLocalStorage(initialState)
+            return state = initialState
         }, 
     }
 })
