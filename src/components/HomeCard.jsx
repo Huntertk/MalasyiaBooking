@@ -63,7 +63,7 @@ const HomeCard = ({data}) => {
                 <h3>{title}</h3>
                 <p>{desc}</p>
                 <p>Next available : Tomorrow</p>
-                <Calender id={id} />
+                {/* <Calender id={id} /> */}
             </div>
             <div className="cardBtnContainer">
                 <Link to="/date-confirm" className='checkAvailability'> Book Now</Link>
