@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setBookingDetailsFromLocalStorage, getBookingDetailsFromLocalStorage } from "../../utils/localStorage";
+import { toast } from 'react-toastify';
+
 
 const initialState = {
     adultCount:0,
@@ -12,7 +14,8 @@ const initialState = {
     seniorTotal: 0,
     totalAmount: 0,
     bookingDate: "",
-    isPaxModal: false
+    isPaxModal: false,
+    loading: false
 }
 
 
@@ -84,8 +87,21 @@ const bookingSlice = createSlice({
         }, 
         cancelBooking: (state) => {
             setBookingDetailsFromLocalStorage(initialState)
+            toast.warning("Booking Cancel")
             return state = initialState
         }, 
+        bookingStart: (state,action) =>{
+            state.loading  = true
+        },
+        bookingSucess: (state, action) => {
+            setBookingDetailsFromLocalStorage(initialState)
+            toast.success("Booking Successfully")
+            return state = initialState
+        },
+        bookingFailed: (state, action) => {
+            state.loading = false
+            toast.error("Booking Failed")
+        }
     }
 })
 
@@ -108,7 +124,10 @@ export const {
     setBookingDate,
     openPaxModel,
     closePaxModel,
-    cancelBooking
+    cancelBooking,
+    bookingFailed,
+    bookingSucess,
+    bookingStart
 } = bookingSlice.actions
 
 export default bookingSlice.reducer

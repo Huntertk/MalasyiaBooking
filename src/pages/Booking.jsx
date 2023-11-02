@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/booking.scss'
 import image from '../assets/images/IMGNINE.jpg'
-import { format } from 'date-fns';
+import axios from 'axios'
 import {BiEditAlt} from 'react-icons/bi'
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { bookingFailed, bookingStart, bookingSucess } from '../features/booking/bookingSlice'
+
 const Booking = () => {
+    const navigate = useNavigate()
     const {
         bookingDate, 
         adultCount, 
@@ -16,12 +19,50 @@ const Booking = () => {
         infantTotal,
         seniorCount,
         seniorTotal,
-        totalAmount
+        totalAmount,
+        loading
     } = useSelector(store => store.booking)
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [mobileNumber, setMobileNumber] = useState("")
+    const dispatch = useDispatch()
+
+
+    const handleSubmit = async(e) => {
+        e.preventDefault()
+        try {
+            dispatch(bookingStart())
+            const res = await axios.post('/api/v1/booking', {
+                name,
+                email,
+                mobileNumber: parseInt(mobileNumber),
+                bookingDate, 
+                adultCount,
+                childCount,
+                infantCount,
+                seniorCount,
+                totalAmount,
+            })
+            dispatch(bookingSucess())
+
+        } catch (error) {
+            dispatch(bookingFailed())
+            console.log(error);
+        }
+
+    }
+    const handlePhNumberChange = (e) => {
+    const inputValue = e.target.value;
+
+    // Limit input to 10 characters and ensure it contains only numbers.
+    if (/^\d*$/.test(inputValue) && inputValue.length <= 10) {
+      setMobileNumber(inputValue);
+    }
+  }
     
 
     if(totalAmount === 0) {
-        return <Navigate to ="/date-confirm" />
+        return <Navigate to ="/" />
     }
   return (
     <section className='bookingMainContainer'>
@@ -70,16 +111,46 @@ const Booking = () => {
                         <span className='totalPayable'>MYR {seniorTotal + infantTotal + childTotal + adultTotal}</span>
                     </div>
                 </div>
-                <form >
+                <form onSubmit={handleSubmit}>
                     <label htmlFor="name">Full Name</label>
-                    <input type="text" id='name'   autoComplete="off" required/>
+                    <input 
+                    type="text" 
+                    id='name'   
+                    autoComplete="off"
+                    required
+                    onChange={(e) => setName(e.target.value)}
+                    value={name}
+                    />
                     <label htmlFor="phone">Mobile Number</label>
-                    <input type="number" id="phone" placeholder='+60XXXXXXXX'  autoComplete="off" required/>
+                    <input 
+                    type="text" 
+                    id="phone" 
+                    placeholder='+60XXXXXXXX'  
+                    autoComplete="off" 
+                    required
+                    onChange={handlePhNumberChange}
+                    value={mobileNumber}
+                    maxLength={"10"}
+                    />
                     <label htmlFor="email">Email</label>
-                    <input type="email" id='email' autoComplete="off" required />
+                    <input 
+                    type="email" 
+                    id='email' 
+                    autoComplete="off" 
+                    required 
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                    />
                     <label htmlFor="cemail">Confirm Email</label>
-                    <input type="email" id='cemail' autoComplete="off" required />
-                    <button>Pay Now</button>
+                    <input 
+                    type="email" 
+                    id='cemail' 
+                    autoComplete="off" 
+                    required 
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                    />
+                    <button type='submit' disabled={loading}>{loading ? "Loading....": "Pay Now"}</button>
                 </form>
             </div>
         </div>
