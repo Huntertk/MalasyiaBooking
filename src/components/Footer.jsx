@@ -3,6 +3,7 @@ import logo from '../assets/images/logo.png'
 import '../styles/footer.scss'
 import {BsFacebook, BsInstagram, BsTwitter} from 'react-icons/bs'
 import {FaXTwitter} from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -22,6 +23,7 @@ const Footer = () => {
                     <p>Terms & Conditions</p>
                     <p>Privacy Policy</p>
                     <p>Company Details</p>
+                    <Link to="/admin/login"><p>Admin</p></Link>
                 </div>
             </div>
             <div className="icons">
