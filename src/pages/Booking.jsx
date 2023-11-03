@@ -141,7 +141,7 @@ const Booking = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                     />
-                    <label htmlFor="cemail">Confirm Email</label>
+                    <label htmlFor="email">Confirm Email</label>
                     <input 
                     type="email" 
                     id='cemail' 

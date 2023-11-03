@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getAdmin, setAdmin } from "../../utils/localStorage";
+import {toast} from 'react-toastify'
 
 const initialState = {
     adminEmail: null,
@@ -33,6 +34,11 @@ const adminSlice = createSlice({
             state.isSidebarOpen = false
             setAdmin(state)
         },
+        adminLogout: (state) => {
+            toast.success("Admin Logout Successfully")
+            setAdmin(initialState)
+            return state = initialState
+        }
     }
 })
 
@@ -41,7 +47,8 @@ export const {
     adminLoginSuccess, 
     adminLoginFailed,
     adminSidebarOpen,
-    adminSidebarClose
+    adminSidebarClose,
+    adminLogout
 } = adminSlice.actions
 
 export default adminSlice.reducer

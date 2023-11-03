@@ -11,6 +11,8 @@
         display: block;
    background-color: $primaryModalColor; 
    min-height: 100vh;
+   height: 100%;
+box-shadow: 10px 0px 10px -15px #111;
    .bigSidebarContainer{
     display: flex;
     flex-direction: column;

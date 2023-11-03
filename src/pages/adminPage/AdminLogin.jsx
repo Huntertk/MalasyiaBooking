@@ -8,8 +8,8 @@ import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 
 const AdminLogin = () => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("ticketmalaysia@admin.com")
+  const [password, setPassword] = useState("Admin_@123")
   const {adminEmail, loading, error} = useSelector(state => state.admin) 
   const dispatch = useDispatch()
   const navigate = useNavigate()
