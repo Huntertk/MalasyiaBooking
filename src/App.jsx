@@ -6,7 +6,13 @@ import Booking from './pages/Booking'
 import BookingDateConfirmation from './components/BookingDateConfirmation'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AdminLogin from './pages/admin/AdminLogin'
+import AdminLogin from './pages/adminPage/AdminLogin'
+import Admin from './pages/adminPage/Admin'
+import AdminProtectedRoute from './components/adminComponents/AdminProtectedRoute'
+import AdminLayout from './components/adminComponents/AdminLayout'
+import AllBookings from './pages/adminPage/AllBookings'
+import PendingBooking from './pages/adminPage/PendingBooking'
+import CompletedBooking from './pages/adminPage/CompletedBooking'
 
 
 const App = () => {
@@ -19,7 +25,14 @@ const App = () => {
           <Route path="/date-confirm" element={<BookingDateConfirmation />} />
           <Route path="/booking" element={<Booking />} />
         </Route>
-          <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route element={<AdminProtectedRoute />}>
+          <Route element={<AdminLayout />}>
+            <Route path="/admin/all-booking" element={<AllBookings />} />
+            <Route path="/admin/completed-booking" element={<CompletedBooking />} />
+            <Route path="/admin/pending-booking" element={<PendingBooking />} />
+          </Route>
+        </Route>
       </Routes>
     </BrowserRouter>
   )

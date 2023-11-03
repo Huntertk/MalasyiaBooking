@@ -105,8 +105,6 @@ const bookingSlice = createSlice({
     }
 })
 
-
-console.log(bookingSlice);
 export const {
     adultCountIncrease, 
     adultCountDecrease, 
