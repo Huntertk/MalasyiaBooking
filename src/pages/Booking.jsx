@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
-import '../styles/booking.scss'
 import image from '../assets/images/IMGNINE.jpg'
 import axios from 'axios'
 import {BiEditAlt} from 'react-icons/bi'
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { bookingFailed, bookingStart, bookingSucess } from '../features/booking/bookingSlice'
+
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
+import '../styles/booking.scss'
 
 const Booking = () => {
     const navigate = useNavigate()
@@ -35,7 +38,7 @@ const Booking = () => {
             const res = await axios.post('/api/v1/booking', {
                 name,
                 email,
-                mobileNumber: parseInt(mobileNumber),
+                mobileNumber,
                 bookingDate, 
                 adultCount,
                 childCount,
@@ -51,14 +54,6 @@ const Booking = () => {
         }
 
     }
-    const handlePhNumberChange = (e) => {
-    const inputValue = e.target.value;
-
-    // Limit input to 10 characters and ensure it contains only numbers.
-    if (/^\d*$/.test(inputValue) && inputValue.length <= 10) {
-      setMobileNumber(inputValue);
-    }
-  }
     
 
     if(totalAmount === 0) {
@@ -67,7 +62,7 @@ const Booking = () => {
   return (
     <section className='bookingMainContainer'>
         <div className="bookingWrapper">
-            <img src={image} alt="" />
+            <img className='banner' src={image} alt="" />
             <h1>Confirm and Pay</h1>
             <div className="detailsWrapper">
                 <div className="topContainer">
@@ -121,7 +116,7 @@ const Booking = () => {
                     onChange={(e) => setName(e.target.value)}
                     value={name}
                     />
-                    <label htmlFor="phone">Mobile Number</label>
+                    {/* <label htmlFor="phone">Mobile Number</label>
                     <input 
                     type="text" 
                     id="phone" 
@@ -131,7 +126,15 @@ const Booking = () => {
                     onChange={handlePhNumberChange}
                     value={mobileNumber}
                     maxLength={"10"}
-                    />
+                    /> */}
+
+
+                    <PhoneInput
+                        defaultCountry="MY"
+                        placeholder="Enter phone number"
+                        value={mobileNumber}
+                        onChange={setMobileNumber}
+                        />
                     <label htmlFor="email">Email</label>
                     <input 
                     type="email" 

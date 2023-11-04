@@ -10,7 +10,7 @@
             text-align: center;
         }
         
-        img{
+        .banner{
             object-fit: cover;
             height: 150px;
             border-radius: 8px;
@@ -109,7 +109,7 @@
 
         .bookingWrapper {
             text-align: center;
-            img {
+            .banner {
                 width: 450px;
             }
                 form {
